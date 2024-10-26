@@ -29,6 +29,9 @@ namespace PuntoDeVenta
 
         private static void ConfigureServices(ServiceCollection services)
         {
+            // Register db context here
+            services.AddDbContext<ApplicationDbContext>();
+
             // Register forms here
             services.AddTransient<MainForm>();
         }
