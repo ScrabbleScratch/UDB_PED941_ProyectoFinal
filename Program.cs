@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using PuntoDeVenta.Interfaces.Services;
 using PuntoDeVenta.Persistence;
 using PuntoDeVenta.Persistence.Seeders;
+using PuntoDeVenta.Services;
 
 namespace PuntoDeVenta
 {
@@ -32,6 +34,8 @@ namespace PuntoDeVenta
             // Register db context here
             services.AddDbContext<ApplicationDbContext>();
 
+            // Register services here
+            services.AddScoped<IHashService, HashService>();
             services.AddScoped<IApplicationSeeder, ApplicationSeeder>();
             // Register forms here
             services.AddTransient<MainForm>();
