@@ -32,6 +32,7 @@ namespace PuntoDeVenta
             // Register db context here
             services.AddDbContext<ApplicationDbContext>();
 
+            services.AddScoped<IApplicationSeeder, ApplicationSeeder>();
             // Register forms here
             services.AddTransient<MainForm>();
         }
