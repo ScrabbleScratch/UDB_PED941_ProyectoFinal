@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using PuntoDeVenta.Controls.Client;
+using PuntoDeVenta.Controls.ClientSelector;
 using PuntoDeVenta.Controls.MainMenu;
 using PuntoDeVenta.Interfaces.Repositories;
 using PuntoDeVenta.Interfaces.Services;
@@ -47,6 +49,8 @@ namespace PuntoDeVenta
             services.AddTransient<MainForm>();
             services.AddTransient<LoginControl>();
             services.AddTransient<MainMenuControl>();
+            services.AddTransient<ClientRegistrationControl>();
+            services.AddTransient<ClientSelectorControl>();
         }
     }
 }
