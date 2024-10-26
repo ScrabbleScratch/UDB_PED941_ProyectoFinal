@@ -44,6 +44,7 @@ namespace PuntoDeVenta
 
             // Register forms here
             services.AddTransient<MainForm>();
+            services.AddTransient<LoginControl>();
         }
     }
 }
