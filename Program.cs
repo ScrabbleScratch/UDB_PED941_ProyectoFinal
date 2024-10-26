@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using PuntoDeVenta.Controls.Client;
+using PuntoDeVenta.Controls.ClientSelector;
+using PuntoDeVenta.Controls.MainMenu;
+using PuntoDeVenta.Controls.Order;
+using PuntoDeVenta.Controls.Reservations;
 using PuntoDeVenta.Interfaces.Repositories;
 using PuntoDeVenta.Interfaces.Services;
 using PuntoDeVenta.Persistence;
@@ -44,6 +49,13 @@ namespace PuntoDeVenta
 
             // Register forms here
             services.AddTransient<MainForm>();
+            services.AddTransient<LoginControl>();
+            services.AddTransient<MainMenuControl>();
+            services.AddTransient<ClientRegistrationControl>();
+            services.AddTransient<ClientSelectorControl>();
+            services.AddTransient<OrderReviewControl>();
+            services.AddTransient<TableReservationControl>();
+            services.AddTransient<TableReservationCheckControl>();
         }
     }
 }
