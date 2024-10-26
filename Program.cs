@@ -37,6 +37,8 @@ namespace PuntoDeVenta
             // Register services here
             services.AddScoped<IHashService, HashService>();
             services.AddScoped<IApplicationSeeder, ApplicationSeeder>();
+            services.AddScoped<IAuthService, AuthService>();
+
             // Register forms here
             services.AddTransient<MainForm>();
         }
